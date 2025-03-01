@@ -37,14 +37,14 @@ const traders = [
       {
         name: "Instagram",
         icon: Instagram,
-        href: "https://www.instagram.com/samuel.santrich?igsh=MXAweWtnamlnY2Freg==",
-        username: "@samuel.santrich",
+        href: "https://www.instagram.com/fxsamu_",
+        username: "@fxsamu_",
       },
       {
         name: "TikTok",
         icon: TikTok,
-        href: "https://www.tiktok.com/@reviews.samu?_t=ZP-8sxoOg2AT0R&_r=1",
-        username: "@reviews.samu",
+        href: "https://www.tiktok.com/@samutrades",
+        username: "@samutrades",
       },
     ],
   },
@@ -55,8 +55,11 @@ export default function Footer() {
     <footer className="bg-background">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {traders.map((trader) => (
-            <div key={trader.name} className="space-y-4">
+          {traders.map((trader, index) => (
+            <div
+              key={trader.name}
+              className={`space-y-4 ${trader.name === "SamuTrades" ? "order-first md:order-none" : ""}`}
+            >
               <h3 className="text-lg font-semibold text-foreground">{trader.name}</h3>
               <div className="flex flex-col space-y-4">
                 {trader.socials.map((social) => (
